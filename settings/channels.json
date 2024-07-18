@@ -1,0 +1,22 @@
+{
+  "verify": {
+    "channelId": 1121129995008483419,
+    "messageId": 1263009674190393376
+  },
+  "stats": {
+    "membersCountChannelId": 1120483796844806244,
+    "botsCountChannelId": 1121737170185633794
+  },
+  "toClean": {
+    "channelsName": [
+      "〔us〕general",
+      "〔es〕general"
+    ]
+  },
+  "suggestions": {
+    "channelId": 1247940611412070512
+  },
+  "partners": {
+    "channelId": 1263616762868666459
+  }
+}
