@@ -60,5 +60,7 @@ class CleanupCog(commands.Cog):
 
 
 async def setup(bot) -> None:
-    channel_names: list[str] = ChannelsConstants.CHANNELS_TO_CLEAR
-    await bot.add_cog(CleanupCog(bot, channel_names))
+    pass
+    # TODO: Uncomment this when the bot is ready to be deployed.
+    #channel_names: list[str] = ChannelsConstants.CHANNELS_TO_CLEAR
+    #await bot.add_cog(CleanupCog(bot, channel_names))
