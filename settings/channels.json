@@ -7,6 +7,9 @@
     "membersCountChannelId": 1120483796844806244,
     "botsCountChannelId": 1121737170185633794
   },
+  "welcome": {
+    "channelId": 1120550554544910417
+  },
   "toClean": {
     "channelsName": [
       "〔us〕general",

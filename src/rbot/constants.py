@@ -2,6 +2,7 @@ from ezjsonpy import translate_message, get_config_value
 
 
 class PathConstants:
+    WELCOME_BACKGROUND_PATH: str = 'assets/welcome_background.png'
     COGS_PATH: str = 'src/rbot/bot/cogs'
     COG_PATH: str = 'src.rbot.bot.cogs'
 
@@ -10,6 +11,7 @@ class ChannelsConstants:
     VERIFICATION_CHANNEL_ID: int = get_config_value('verify.channelId', 'channels')
     MEMBERS_COUNT_CHANNEL_ID: int = get_config_value('stats.membersCountChannelId', 'channels')
     BOTS_COUNT_CHANNEL_ID: int = get_config_value('stats.botsCountChannelId', 'channels')
+    WELCOME_CHANNEL_ID: int = get_config_value('welcome.channelId', 'channels')
     CHANNELS_TO_CLEAR: list = get_config_value('toClean.channelsName', 'channels')
 
 
