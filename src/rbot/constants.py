@@ -13,6 +13,7 @@ class ChannelsConstants:
     BOTS_COUNT_CHANNEL_ID: int = get_config_value('stats.botsCountChannelId', 'channels')
     WELCOME_CHANNEL_ID: int = get_config_value('welcome.channelId', 'channels')
     CHANNELS_TO_CLEAR: list = get_config_value('toClean.channelsName', 'channels')
+    SUGGESTION_CHANNEL_ID: int = get_config_value('suggestions.channelId', 'channels')
 
 
 class MessagesConstants:
