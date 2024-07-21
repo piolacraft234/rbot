@@ -19,12 +19,10 @@ class MessageReactionListener(commands.Cog):
         if message.author.bot:
             return
 
-        # Check if the message was sent in the specific channel
-        if message.channel.id == ChannelsConstants.SPECIFIC_CHANNEL_ID:
+        # Check if the message was sent in the suggestion channel
+        if message.channel.id == ChannelsConstants.SUGGESTION_CHANNEL_ID:
             try:
-                # React with a check mark
                 await message.add_reaction('✅')
-                # React with an X mark
                 await message.add_reaction('❌')
                 logger.info(f"Reacted to a message from {message.author} in {message.channel.name}")
             except Exception as e:
