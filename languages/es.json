@@ -1,0 +1,66 @@
+{
+  "botStarted": "El bot de Discord se inició con éxito.",
+  "botStopped": "El bot de Discord se detuvo con éxito.",
+  "commands": {
+    "noPerms": "No tienes permiso para usar este comando.",
+    "verify": {
+      "embed": {
+        "title": "🔰 Sistema de Verificación",
+        "description": "¡Hola!\n Bienvenido a mi servidor de Discord. ¡Para acceder a los canales, haz clic en el botón verde!",
+        "roleNotFound": "Rol de verificación no encontrado. Lo sentimos por el inconveniente.",
+        "roleNotFoundLog": "Rol de verificación no encontrado. Verifica el ID del rol en el archivo de configuración.",
+        "buttonText": "¡Haz clic aquí!"
+      },
+      "verifySuccess": "¡Has sido verificado con éxito! ¡Bienvenido al servidor!",
+      "redButtonText": "¡Necesitas hacer clic en el botón verde para verificarte!"
+    },
+    "docs": {
+      "description": "Muestra la documentación de un proyecto.",
+      "guideNotFound": "Guía no encontrada. Verifica el nombre de la guía y vuelve a intentarlo.",
+      "embed": {
+        "title": "📚 Documentación de %project% - ",
+        "footer": "Solicitado por %user%"
+      },
+      "projects": {
+        "mcptool": {
+          "description": "Herramienta de pentesting para Minecraft.",
+          "guides": {
+            "How to install": "Para instalar MCPTool sigue estos pasos:\n https://github.com/wrrulos/mcptool/blob/main/docs/instalation.MD",
+            "How to uninstall": "Si instalaste MCPTool usando pip, simplemente usa pip uninstall mcptool y elimina la carpeta MCPToolData en %appdata%. Si lo instalaste con el instalador .msi, necesitas desinstalarlo desde el panel de control y eliminar la carpeta mencionada anteriormente.",
+            "How to use": "Para usar MCPTool, abre el símbolo del sistema y escribe mcptool.",
+            "How to use the fakeproxy command": ""
+          }
+        },
+        "mcpclient": {
+          "description": "Cliente de Minecraft para pentesting.",
+            "guides": {
+              "How to install": "Para instalar MCPClient sigue estos pasos: https://github.com/pedroagustinvega/mcpclient/blob/main/README.md\n"
+            }
+        }
+      }
+    },
+    "partner": {
+      "description": "Agregar o eliminar un socio de la lista.",
+      "partnerExists": "El socio ya existe. Verifica el nombre del socio y vuelve a intentarlo.",
+      "partnerNotFound": "Socio no encontrado. Verifica el nombre del socio y vuelve a intentarlo.",
+      "partnerMessageNotFound": "Mensaje de inserción no encontrado. Verifica el ID del mensaje en el archivo de configuración.",
+      "partnerAdded": "Socio agregado con éxito.",
+      "partnerRemoved": "Socio eliminado con éxito.",
+      "embed": {
+        "footer": "Socio del servidor."
+      }
+    }
+  },
+  "tasks": {
+    "canalCleaning": {
+      "cloneReason": "Clonando canales para mantener el original.",
+      "deleteReason": "Limpiando canales de mensajes.",
+      "success": "Limpieza del canal completada con éxito."
+    }
+  },
+  "generalErrors": {
+    "invalidUrl": "URL inválida. Verifica la URL y vuelve a intentarlo."
+  }
+}
+
+#Traducido por Piolacraft & Nordify (discord.gg/ducks)
