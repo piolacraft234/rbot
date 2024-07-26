@@ -8,6 +8,7 @@ from loguru import logger
 
 from src.rbot.bot.utilities.embed import EmbedUtilities
 from src.rbot.utilities.url import UrlUtilities
+from discord.ext.commands import has_permissions
 
 
 class PartnerCommandGroup(app_commands.Group):
