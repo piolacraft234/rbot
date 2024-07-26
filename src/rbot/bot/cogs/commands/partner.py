@@ -18,6 +18,7 @@ class PartnerCommandGroup(app_commands.Group):
         name="add",
         description="Add a new partner."
     )
+    @has_permissions(administrator=True)
     @logger.catch
     async def add(self, interaction: discord.Interaction, name: str, description: str, logo: str, invite: str):
         """
@@ -86,6 +87,7 @@ class PartnerCommandGroup(app_commands.Group):
         name="remove",
         description="Remove a partner."
     )
+    @has_permissions(administrator=True)
     @logger.catch
     async def remove(self, interaction: discord.Interaction, name: str):
         """
