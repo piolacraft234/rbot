@@ -25,7 +25,7 @@
         "mcptool": {
           "description": "Pentesting tool for Minecraft.",
           "guides": {
-            "How to install": "To install MCPTool follow these steps:\n https://github.com/wrrulos/mcptool/blob/main/docs/instalation.MD",
+            "How to install": "To install MCPTool follow these steps:\n https://github.com/pedroagustinvega/mcptool/blob/main/docs/instalation.MD",
             "How to uninstall": "If you install mcptool using pip, just use pip uninstall mcptool and delete the MCPToolData folder in %appdata%. If you installed it with the .msi installer, you need to uninstall it from the control panel and delete the folder mentioned above.",
             "How to use": "To use MCPTool, open the command prompt and type mcptool.",
             "How to use the fakeproxy command": ""
