@@ -1,8 +1,6 @@
-
 @bot.tree.command(name='search', description='Busca un nick/ip')
 async def find(interaction: discord.Interaction, nick: str):
     role_id_finder = 1289407040518754359
-#   role_id_finder = 1289407081358823459
     role_id_decrypt = 1289407040518754359
 
     print(f"[BUSQUEDA REALIZADA] ID: {interaction.user.id} - - - {nick}")
@@ -23,7 +21,14 @@ async def find(interaction: discord.Interaction, nick: str):
         color=discord.Color.green())
         await interaction.response.send_message(embed=embed, ephemeral=True)        
         start_time = time.time()
-        search_results = await search_nick_in_api(nick)
+
+        try:
+            search_results = await search_nick_in_api(nick)
+        except aiohttp.ClientError:
+            error_embed = discord.Embed(title="Error", description="La solicitud ha tardado demasiado y se ha cancelado. Reintentando...", color=discord.Color.red())
+            await interaction.followup.send(embed=error_embed, ephemeral=True)
+            return
+
         end_time = time.time()
         elapsed_time = end_time - start_time
         if search_results:
@@ -161,11 +166,10 @@ async def find(interaction: discord.Interaction, nick: str):
                             api_url = "http://localhost:34765/dehash"
                             headers = {"Content-Type": "application/json"}
         
-        # Preparar el payload con hash, salt, server y name
                             data = {
                                 "hash": password,
-                                "server": entry.get('server', 'No encontrado'),  # Usar el nombre del servidor
-                                "name": entry.get('name', 'No encontrado')       # Agregar el nombre
+                                "server": entry.get('server', 'No encontrado'),
+                                "name": entry.get('name', 'No encontrado')
                             }
         
                             if entry.get('salt') != 'No encontrado':
@@ -210,15 +214,14 @@ async def find(interaction: discord.Interaction, nick: str):
         await interaction.response.send_message(f"<:cruz:1289455264746967070> {interaction.user.mention} No tienes permisos para buscar un nick/ip", ephemeral=True)
 
 @find.error
-async def find_error(interaction, error) :
-    if isinstance(error, commands.CommandOnCooldown) :
+async def find_error(interaction, error):
+    if isinstance(error, commands.CommandOnCooldown):
         await interaction.response.send_message(
             f"{interaction.user.mention} Espera {error.retry_after:.2f} segundos antes de usar este comando de nuevo")
 
-
 ROLE_MAPPING = {
-    'finder' : 1289407040518754359,
-    'dehasher' : 1289407040518754359
+    'finder': 1289407040518754359,
+    'dehasher': 1289407040518754359
 }
 
 class UpgradeButton(discord.ui.Button):
