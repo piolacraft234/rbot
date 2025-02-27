@@ -1,6 +1,0 @@
-discord.py
-ezjsonpy
-loguru
-python-dotenv
-pillow
-requests
